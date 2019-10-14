@@ -1,0 +1,15 @@
+<%= form_with model: @user, local: true do |f| %>
+    <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+    <% end %>
+    <p>Name:</p> <%= f.text_field :name %>
+    <p>Email:</p> <%= f.text_field :email %>
+    <p>National ID:</p> <%= f.text_field :national_id %>
+    <p>Phone Number:</p> <%= f.text_field :phone_number %>
+    <p>Description:</p> <%= f.text_area :description %>
+    <p>Upload Resume</p> <%= f.file_field :file %>
+    <br><br>
+    <%= f.submit%>
+<% end %>
