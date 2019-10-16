@@ -4,12 +4,12 @@
             <li><%= message %></li>
         <% end %>
     <% end %>
-    <p>Name:</p> <%= f.text_field :name %>
-    <p>Email:</p> <%= f.text_field :email %>
-    <p>National ID:</p> <%= f.text_field :national_id %>
-    <p>Phone Number:</p> <%= f.text_field :phone_number %>
-    <p>Description:</p> <%= f.text_area :description %>
+    <p>Name:</p> <%= f.text_field :name, class: 'form-control form-group' %>
+    <p>Email:</p> <%= f.text_field :email, class: 'form-control form-group' %>
+    <p>National ID:</p> <%= f.text_field :national_id, class: 'form-control form-group' %>
+    <p>Phone Number:</p> <%= f.text_field :phone_number, class: 'form-control form-group' %>
+    <p>Description:</p> <%= f.text_area :description, class: 'form-control form-group' %>
     <p>Upload Resume</p> <%= f.file_field :file %>
     <br><br>
-    <%= f.submit%>
+    <span class="btn btn-secondary"> <%= f.submit %> </span>
 <% end %>
